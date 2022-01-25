@@ -9,15 +9,28 @@ for the project you will need the following:
 
 - use npm i or yarn add
 
+```bash
 $ npm i -g sanity/cli
+```
 
 then:
 create schema:
-$ sanity init
-cd into studio dir then run
-$ sanity start
 
+```bash
+$ sanity init
+```
+
+cd into studio dir then run
+
+```bash
+$ sanity start
+```
+
+to download dependancies:
+
+```bash
 $ npm i @3rdweb/hooks @3rdweb/react @3rdweb/sdk @sanity/client @sanity/image-url next react react-chartjs-2 chart.js react-dom react-icons styled-components
+```
 
 To run nextjs application run:
 
