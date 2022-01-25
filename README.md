@@ -7,7 +7,17 @@ NEXT_PUBLIC_METAMASK_KEY={your public metamask token}
 
 for the project you will need the following:
 
-$ npm i @3rdweb/hooks @3rdweb/react @3rdweb/sdk @sanity/client @sanity/image-url next react react-dom react-icons styled-components
+- use npm i or yarn add
+
+$ npm i -g sanity/cli
+
+then:
+create schema:
+$ sanity init
+cd into studio dir then run
+$ sanity start
+
+$ npm i @3rdweb/hooks @3rdweb/react @3rdweb/sdk @sanity/client @sanity/image-url next react react-chartjs-2 chart.js react-dom react-icons styled-components
 
 To run nextjs application run:
 

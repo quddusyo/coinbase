@@ -3,37 +3,52 @@ import styled from 'styled-components';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import { coins } from '../static/coins';
 import Coin from './Coin';
+import BalanceChart from './BalanceChart';
 
 const Portfolio = () => {
   return (
     <Wrapper>
-        <PortfolioTable>
-            <TableItem>
-                <Title>Your Assets</Title>
-            </TableItem>
-            <Divider />
-            <Table>
+        <Content>
+            <Chart>
+                <div>
+                    <Balance>
+                        <BalanceTitle>Portfolio balance</BalanceTitle>
+                        <BalalnceValue>
+                            {'$'}
+                            45,000
+                        </BalalnceValue>
+                    </Balance>
+                </div>
+                <BalanceChart />
+            </Chart>
+            <PortfolioTable>
                 <TableItem>
-                    <TableRow>
-                        <div style={{ flex : 3 }}>Name</div>
-                        <div style={{ flex : 2 }}>Balance</div>
-                        <div style={{ flex : 1 }}>Price</div>
-                        <div style={{ flex : 1 }}>Allocation</div>
-                        <div style={{ flex : 0 }}>
-                            <BsThreeDotsVertical />
-                        </div>
-                    </TableRow>
+                    <Title>Your Assets</Title>
                 </TableItem>
                 <Divider />
-                <div>{coins.map(coin => (
-                    <div>
-                        <Coin coin={coin} />
-                        <Divider />
+                <Table>
+                    <TableItem>
+                        <TableRow>
+                            <div style={{ flex : 3 }}>Name</div>
+                            <div style={{ flex : 2 }}>Balance</div>
+                            <div style={{ flex : 1 }}>Price</div>
+                            <div style={{ flex : 1 }}>Allocation</div>
+                            <div style={{ flex : 0 }}>
+                                <BsThreeDotsVertical />
+                            </div>
+                        </TableRow>
+                    </TableItem>
+                    <Divider />
+                    <div>{coins.map(coin => (
+                        <div>
+                            <Coin coin={coin} />
+                            <Divider />
+                        </div>
+                    ))}
                     </div>
-                ))}
-                </div>
-            </Table>
-        </PortfolioTable>
+                </Table>
+            </PortfolioTable>
+        </Content>
     </Wrapper>
   )
 };
@@ -50,6 +65,24 @@ const Content = styled.div`
     width: 100%;
     max-width: 1000px;
     padding: 2rem 1rem;
+`
+
+const Chart = styled.div`
+    border: 1px solid #282b2f;
+    padding: 1rem 2rem;
+`
+
+const Balance = styled.div``
+
+const BalanceTitle = styled.div`
+    color: #8a919e;
+    font-size: 0.9rem;
+`
+
+const BalalnceValue = styled.div`
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
 `
 
 const PortfolioTable = styled.div`
