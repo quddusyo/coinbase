@@ -29,7 +29,7 @@ $ sanity start
 to download dependancies:
 
 ```bash
-$ npm i @3rdweb/hooks @3rdweb/react @3rdweb/sdk @sanity/client @sanity/image-url next react react-chartjs-2 chart.js react-dom react-icons styled-components
+$ npm i @3rdweb/hooks @3rdweb/react @3rdweb/sdk @sanity/client @sanity/image-url next react react-chartjs-2 chart.js react-dom react-icons react-loader-spinner react-modal styled-components
 ```
 
 To run nextjs application run:
